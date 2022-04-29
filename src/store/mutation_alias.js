@@ -1,1 +1,2 @@
 export const UP_DATAED_USERNAME = 'UP_DATAED_USERNAME'
+export const UP_DATAED_NEWS = 'UP_DATAED_NEWS'

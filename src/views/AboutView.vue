@@ -8,6 +8,10 @@
     用户姓名：<p>{{userInfo[1].userName}}</p>
     用户年龄：<p>{{userInfo[1].userAge}}</p>
     <button @click="updataUserInfo">点击修改用户信息</button>
+
+    <hr>
+    <p>{{news.text}}</p>
+    <button @click="changeClick">修改内容</button>
   </div>
 </template>
 
@@ -19,11 +23,16 @@ export default {
     }
   },
   computed: {
-    ...mapState(['userInfo', 'text'])
+    ...mapState(['userInfo', 'text', 'news'])
   },
   methods: {
     updataUserInfo () {
       this.$store.commit('UP_DATAED_USERNAME')
+    },
+    changeClick () {
+      // this.$store.commit('UP_DATAED_NEWS')
+      // console.log(12)
+      this.$store.dispatch('updatedUserInfo', '修改成功')
     }
   }
 }
