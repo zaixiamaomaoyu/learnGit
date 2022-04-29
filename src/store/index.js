@@ -12,6 +12,15 @@ const moduleA = {
     text: '好饿啊，准备上去吃饭！'
   }
 }
+const mutations = {
+  updateUserInfo (state) {
+    state.userInfo[0].userName = 'zjp'
+    state.userInfo[0].userAge = 23
+  }
+}
+const actions = {
+
+}
 
 const getters = {
   getUserInfoLength (state) {
@@ -27,6 +36,7 @@ export default new Vuex.Store({
     text: '好饿啊，准备上去吃饭！'
   },
   getters,
+  mutations,
   modules: {
     a: moduleA
   }
