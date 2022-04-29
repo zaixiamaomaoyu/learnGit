@@ -1,0 +1,1 @@
+export const UP_DATAED_USERNAME = 'UP_DATAED_USERNAME'
